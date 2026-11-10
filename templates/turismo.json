@@ -1,0 +1,62 @@
+{
+ "id": "turismo",
+ "label": "Turismo",
+ "brand": "Miombo Camp",
+ "domain": "miombocamp.co.mz",
+ "headline": "Noites de fogueira, manhãs de savana.",
+ "sub": "Tendas de safari no interior de Moçambique, com guias locais e reserva direta.",
+ "cta": "Ver disponibilidade",
+ "links": [
+  "Tendas",
+  "Safaris",
+  "Galeria",
+  "Reservar"
+ ],
+ "fonts": {
+  "display": "DM Serif Display",
+  "weight": 400
+ },
+ "radius": "999px",
+ "nav": "glass",
+ "hero": "full",
+ "image": "assets/img/tpl-savana.webp",
+ "product": null,
+ "palettes": [
+  {
+   "name": "Savana",
+   "bg": "#2A2016",
+   "fg": "#F6EEDC",
+   "accent": "#E0A43A",
+   "surface": "#3A2D1F"
+  },
+  {
+   "name": "Acácia",
+   "bg": "#F4EEDF",
+   "fg": "#2F3B22",
+   "accent": "#6B7F2A",
+   "surface": "#FFFFFF"
+  },
+  {
+   "name": "Terra",
+   "bg": "#FFF3E6",
+   "fg": "#3B2414",
+   "accent": "#C2562B",
+   "surface": "#FFFFFF"
+  }
+ ],
+ "cards": [
+  [
+   "Tenda Miombo",
+   "Vista para a savana"
+  ],
+  [
+   "Safari ao nascer",
+   "Saídas às 5 h 30"
+  ],
+  [
+   "Transfer",
+   "Do aeródromo local"
+  ]
+ ],
+ "art": null
+}

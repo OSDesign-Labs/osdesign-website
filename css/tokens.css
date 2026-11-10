@@ -1,0 +1,77 @@
+/* OS Design · design system Deep Signal — tokens, base e componentes partilhados.
+   Visual único e deliberado (escuro, com o estúdio claro só na intro), sem troca de tema. */
+:root {
+  color-scheme: dark;
+  /* base */
+  --void: #020817; --navy: #031130; --surface-2: #061A47; --midnight: #0B1E5B;
+  --blue: #185DF1; --blue-hover: #3874F3; --blue-400: #4F84F4; --blue-50: #EDF2FE;
+  --cyan: #46C6E5; --mist: #CFE0FF; --ice: #F3F7FE; --lime: #8AB640; --forest: #2F5C1A; --ocean: #048FCD;
+  --line: rgba(243,247,254,.14); --muted: #9CA6BA; --muted-2: #7B808B; --ink: #020817;
+  /* tipografia */
+  --display: "Syne", "Arial Black", Arial, sans-serif;
+  --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  /* forma */
+  --r-btn: 10px; --r-card: 14px; --r-arc: 28px;
+  /* movimento (Emil Kowalski: ease-out forte para entrar, ease-in-out para mover) */
+  --ease-out: cubic-bezier(.23,1,.32,1);
+  --ease-in-out: cubic-bezier(.77,0,.175,1);
+  --ease-straight: cubic-bezier(.2,.8,.2,1);
+  /* vidro: só em pills, cartões flutuantes, janelas do editor e navbar (~10% da interface) */
+  --glass-bg: rgba(243,247,254,.08); --glass-line: rgba(255,255,255,.14);
+  --gl: max(24px, env(safe-area-inset-left, 0px)); --gr: max(24px, env(safe-area-inset-right, 0px));
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@media (max-width: 640px) { :root { --gl: max(16px, env(safe-area-inset-left, 0px)); --gr: max(16px, env(safe-area-inset-right, 0px)); } }
+
+html, body { background: var(--navy); color: var(--ice); }
+body { font-family: var(--body); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+::selection { background: var(--blue); color: #fff; }
+img { display: block; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+.it { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -.005em; }
+.eyebrow { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.band { padding-left: var(--gl); padding-right: var(--gr); }
+.wrap { max-width: 1280px; margin: 0 auto; }
+.grain { position: relative; isolation: isolate; }
+.grain::after { content: ""; position: absolute; inset: 0; background: var(--grain); opacity: .1; mix-blend-mode: overlay; pointer-events: none; z-index: 0; }
+.grain > * { position: relative; z-index: 1; }
+
+/* vidro */
+.glass { background: var(--glass-bg); border: 1px solid var(--glass-line); -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%); }
+
+/* botões (DS 15.1) */
+.btn { display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 18px; border-radius: var(--r-btn); font: 600 15px/1 var(--body); color: var(--ice); text-decoration: none; cursor: pointer; border: 1px solid rgba(243,247,254,.28); background: transparent; transition: background-color .2s var(--ease-out), border-color .2s var(--ease-out), transform .16s var(--ease-out); white-space: nowrap; }
+.btn:hover { border-color: rgba(243,247,254,.65); background: rgba(243,247,254,.05); }
+.btn:active { transform: scale(.97); }
+.btn.primary { background: var(--blue); border: 0; color: #fff; padding: 0 8px 0 18px; }
+.btn.primary:hover { background: var(--blue-hover); }
+.btn .arr { width: 32px; height: 32px; border-radius: 7px; background: rgba(255,255,255,.15); display: grid; place-items: center; transition: transform .2s var(--ease-out); }
+.btn:hover .arr { transform: translateX(3px); }
+.btn .arr svg { width: 16px; height: 16px; }
+.btn.pill { border-radius: 999px; }
+.btn.glass:hover { background: rgba(243,247,254,.14); }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border-radius: 999px; font: 500 12px/1 var(--mono); letter-spacing: .06em; border: 1px solid rgba(243,247,254,.2); color: var(--ice); }
+.chip.live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 4px rgba(138,182,64,.22); }
+
+/* ângulos que endireitam (no hover e no foco por teclado) */
+.tilt { transform: rotate(var(--tilt, -3deg)); transition: transform .6s var(--ease-straight); }
+@media (hover: hover) and (pointer: fine) { .tilt:hover { transform: rotate(0deg); } }
+.tilt:focus-within, .tilt:focus-visible { transform: rotate(0deg); }
+
+/* letras que sobem (hero e manifesto) */
+.split .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
+.split .c { display: inline-block; will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tilt, .btn, .btn .arr { transition: none; }
+  .tilt { transform: none; }
+}

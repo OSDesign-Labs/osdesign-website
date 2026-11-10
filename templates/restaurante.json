@@ -1,0 +1,62 @@
+{
+ "id": "restaurante",
+ "label": "Restaurante",
+ "brand": "Kanimambo",
+ "domain": "kanimambo.co.mz",
+ "headline": "Sabores de Moçambique, com gratidão.",
+ "sub": "Matapa, caril de caranguejo e piri-piri da casa. Reserva a tua mesa em segundos.",
+ "cta": "Reservar mesa",
+ "links": [
+  "Menu",
+  "Reservas",
+  "Eventos",
+  "Contacto"
+ ],
+ "fonts": {
+  "display": "Fraunces",
+  "weight": 700
+ },
+ "radius": "999px",
+ "nav": "classic",
+ "hero": "split",
+ "image": "assets/img/tpl-kani.webp",
+ "product": null,
+ "palettes": [
+  {
+   "name": "Carvão e açafrão",
+   "bg": "#1B1714",
+   "fg": "#F7EDE0",
+   "accent": "#F2A93B",
+   "surface": "#2A231E"
+  },
+  {
+   "name": "Piri-piri",
+   "bg": "#FFF6EC",
+   "fg": "#2A1A14",
+   "accent": "#D9442B",
+   "surface": "#FFFFFF"
+  },
+  {
+   "name": "Folha de mandioca",
+   "bg": "#14261C",
+   "fg": "#EEF3E6",
+   "accent": "#8AB640",
+   "surface": "#1E3427"
+  }
+ ],
+ "cards": [
+  [
+   "Menu do dia",
+   "Pratos frescos todas as manhãs"
+  ],
+  [
+   "Reservas",
+   "Confirmação pelo WhatsApp"
+  ],
+  [
+   "Eventos",
+   "Música ao vivo às sextas"
+  ]
+ ],
+ "art": null
+}

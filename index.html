@@ -1,0 +1,685 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>OSDesign Website</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="OS Design, Maputo: design, desenvolvimento, hospedagem e automação de sites com movimento, ritmo e identidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:wght@700&family=Montserrat:wght@800;900&family=DM+Serif+Display&family=Coiny&display=swap">
+<link rel="preload" as="image" href="assets/img/scene-laptop.jpg">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/v3.css">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="os-s" viewBox="0 0 512 512"><path d="M224.0 509.9C183.9 504.6 148.2 491.3 114.7 469.0C-11.3 385.2 -37.7 213.0 57.3 95.0C151.3 -21.7 325.6 -32.2 433.8 72.4C499.1 135.5 525.8 227.1 504.9 315.9C487.9 387.8 436.9 451.5 369.5 485.2C325.1 507.4 272.8 516.3 224.0 509.9ZM310.2 467.1C377.2 448.6 430.0 403.2 456.3 341.5C460.6 331.5 465.3 317.9 464.7 317.3C464.4 317.1 460.2 319.5 455.4 322.6C421.5 344.5 381.9 357.9 317.0 369.5C247.9 381.9 220.8 404.9 232.0 441.3C236.1 454.5 249.7 464.6 268.9 468.6C278.7 470.6 300.4 469.8 310.2 467.1ZM197.9 458.5C181.1 415.2 198.8 373.8 243.5 352.1C263.8 342.2 281.6 337.0 316.0 331.0C417.7 313.1 472.0 278.7 472.0 232.2C472.0 203.2 452.6 186.6 418.5 186.5C384.4 186.5 359.3 200.5 283.0 262.1C224.1 309.7 206.7 321.8 177.8 335.5C138.6 354.0 95.5 355.0 61.2 338.3C57.2 336.3 53.7 335.0 53.3 335.3C52.4 336.3 66.4 363.9 73.0 374.0C99.9 414.8 138.7 445.6 183.0 461.1C201.8 467.8 201.5 467.8 197.9 458.5ZM142.5 308.6C154.7 305.0 176.8 293.9 192.1 283.7C211.6 270.7 223.9 261.1 271.5 222.4C346.6 161.1 390.7 141.7 437.3 149.4C441.6 150.1 445.3 150.3 445.6 149.9C446.3 148.7 436.1 141.0 427.7 136.3C411.0 127.0 399.2 124.0 379.7 124.0C351.6 124.1 332.0 131.5 276.3 163.3C219.6 195.6 204.6 201.4 176.0 201.5C158.0 201.5 150.2 199.8 137.0 192.9C110.4 179.1 95.8 154.2 95.7 122.3C95.6 107.1 96.1 107.3 86.8 118.9C58.6 153.9 38.7 204.5 40.4 237.0C42.6 278.9 63.0 304.5 99.2 310.9C109.6 312.8 132.5 311.6 142.5 308.6ZM197.0 160.5C209.5 156.5 228.2 147.2 257.0 130.5C316.7 96.1 347.3 85.1 384.3 85.0C391.7 85.0 391.5 84.8 376.8 75.0C340.7 50.8 298.9 38.0 260.3 39.3C182.6 41.9 123.7 86.0 134.6 133.3C140.5 158.7 166.8 170.2 197.0 160.5Z" fill-rule="evenodd"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <button class="npill solid nmenu" type="button" id="menuBtn" aria-expanded="false" aria-controls="menu"><i class="burger" aria-hidden="true"></i><span class="mt"><span>Menu</span><span>Fechar</span></span></button>
+  <a class="brand" href="#topo" aria-label="OS Design, início"><svg aria-hidden="true" fill="currentColor"><use href="#os-s"/></svg>OS Design</a>
+  <div class="nav-r"><a class="npill cyan" href="#contacto">Fala connosco</a><a class="ncirc" href="https://wa.me/258840772648" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1112 20a8 8 0 01-3.9-1z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-1 1c-1-.4-1.9-1.3-2.3-2.3l1-1-1-2z" fill="currentColor" stroke="none"/></svg></a></div>
+</header>
+
+<div class="mark" id="mark" aria-hidden="true"><canvas id="globe"></canvas></div>
+<div class="boot-meta" id="bootMeta" aria-hidden="true"><span class="pct">000%</span><span class="word">OS Design</span><span class="on">online</span></div>
+
+<div class="guide glass" id="guide" aria-live="polite">
+  <div class="g-orb" aria-hidden="true"><svg class="on" viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 016.5 4h11A2.5 2.5 0 0120 6.5v7a2.5 2.5 0 01-2.5 2.5H10l-4.5 4v-4A1.5 1.5 0 014 14.5z"/><path d="M8 9h8M8 12.5h5"/></svg><svg class="" viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><rect x="15.5" y="15.5" width="5" height="5" rx="1.2"/><path d="M8.5 6h6.5a3 3 0 013 3v6.5"/><path d="M6 8.5V15a3 3 0 003 3h6.5"/></svg><svg class="" viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="2"/><path d="M3.5 9h17M10 9v11"/></svg><svg class="" viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19C7 8 17 16 20 5"/><circle cx="4" cy="19" r="1.6"/><circle cx="20" cy="5" r="1.6"/><path d="M4 19l5-1.5M20 5l-5 1.5"/></svg><svg class="" viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 100 17c1.4 0 2-1 1.4-2.1-.7-1.3.2-2.9 1.7-2.9h1.9a3.5 3.5 0 003.5-3.5c0-4.8-3.8-8.5-8.5-8.5z"/><circle cx="8" cy="10" r="1.2"/><circle cx="12" cy="7.5" r="1.2"/><circle cx="16" cy="10" r="1.2"/></svg><svg class="" viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/><path d="M13.5 4.5l-3 15"/></svg><svg class="" viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 2.2 4.5 5.4 4.5 9.2L14 16h-4l-2.5-3.8C7.5 8.4 9 5.2 12 3z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M9.5 16l-2 4 3-1.4M14.5 16l2 4-3-1.4"/></svg><svg class="" viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg></div>
+  <div class="g-txt"><span id="gNo">Fase 01</span><b id="gName">Conversa</b></div>
+  <div class="g-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<main id="main">
+<section class="intro" id="topo" aria-label="Introdução">
+  <div class="stage" id="stage">
+    <div class="world" id="world">
+      <img id="scene" class="scene" src="assets/img/scene-laptop.jpg" alt="Duas pessoas de costas diante de um portátil num estúdio claro" draggable="false">
+      <img id="scenePhone" class="scene" src="assets/img/scene-phone.jpg" alt="Duas pessoas de costas a olhar para um telemóvel num estúdio claro" draggable="false" hidden>
+      <div class="tint" aria-hidden="true"></div>
+    </div>
+    <div class="stage-grain" aria-hidden="true"></div>
+    <div class="hud" id="hud" aria-hidden="true"><i></i><i></i><i></i><i></i><div class="tag"><span>OS Design · Maputo</span><span>Do Rovuma ao Maputo — 2026</span></div></div>
+    <div class="hint" id="hint">Desliza para ligar<i></i></div>
+    <div class="frame" id="frame" aria-hidden="true"></div>
+
+    <div class="hero" id="hero">
+      <div class="h-light" id="hLight" aria-hidden="true"></div>
+      <svg class="ondas" id="ondas" viewBox="0 0 760 1000" fill="none" aria-hidden="true"><path class="o" style="--i:0;--s:0" d="M380 220A30 30 0 0 0 380 280"/><path class="o" style="--i:1;--s:0" d="M380 193A57 57 0 0 0 380 307"/><path class="o" style="--i:2;--s:0" d="M380 166A84 84 0 0 0 380 334"/><path class="o hi" style="--i:3;--s:0" d="M380 139A111 111 0 0 0 380 361"/><path class="o" style="--i:4;--s:0" d="M380 112A138 138 0 0 0 380 388"/><path class="o" style="--i:5;--s:0" d="M380 85A165 165 0 0 0 380 415"/><path class="o" style="--i:6;--s:0" d="M380 58A192 192 0 0 0 380 442"/><path class="o" style="--i:7;--s:0" d="M380 31A219 219 0 0 0 380 469"/><path class="o hi" style="--i:8;--s:0" d="M380 4A246 246 0 0 0 380 496"/><path class="o" style="--i:9;--s:0" d="M380 -23A273 273 0 0 0 380 523"/><path class="o" style="--i:10;--s:0" d="M380 -50A300 300 0 0 0 380 550"/><path class="o" style="--i:11;--s:0" d="M380 -77A327 327 0 0 0 380 577"/><path class="o" style="--i:12;--s:0" d="M380 -104A354 354 0 0 0 380 604"/><path class="o" style="--i:13;--s:0" d="M380 -131A381 381 0 0 0 380 631"/><path class="o" style="--i:0;--s:1" d="M380 720A30 30 0 0 1 380 780"/><path class="o" style="--i:1;--s:1" d="M380 693A57 57 0 0 1 380 807"/><path class="o" style="--i:2;--s:1" d="M380 666A84 84 0 0 1 380 834"/><path class="o" style="--i:3;--s:1" d="M380 639A111 111 0 0 1 380 861"/><path class="o" style="--i:4;--s:1" d="M380 612A138 138 0 0 1 380 888"/><path class="o hi" style="--i:5;--s:1" d="M380 585A165 165 0 0 1 380 915"/><path class="o" style="--i:6;--s:1" d="M380 558A192 192 0 0 1 380 942"/><path class="o" style="--i:7;--s:1" d="M380 531A219 219 0 0 1 380 969"/><path class="o" style="--i:8;--s:1" d="M380 504A246 246 0 0 1 380 996"/><path class="o" style="--i:9;--s:1" d="M380 477A273 273 0 0 1 380 1023"/><path class="o hi" style="--i:10;--s:1" d="M380 450A300 300 0 0 1 380 1050"/><path class="o" style="--i:11;--s:1" d="M380 423A327 327 0 0 1 380 1077"/><path class="o" style="--i:12;--s:1" d="M380 396A354 354 0 0 1 380 1104"/><path class="o" style="--i:13;--s:1" d="M380 369A381 381 0 0 1 380 1131"/></svg>
+      <div class="hero-in">
+        <div class="hero-copy">
+          <div class="eyebrow"><span>Agência digital · Maputo</span></div>
+          <h1 class="split" id="heroTitle">Sites e<span class="br"></span> sistemas que<span class="br"></span> fazem o teu<span class="br"></span> negócio <span class="it">crescer.</span></h1>
+          <p>Design, desenvolvimento, hospedagem e automação para empresas moçambicanas.</p>
+          <div class="ctas"><a class="pbtn solid" href="#contacto">Pedir orçamento <span class="pbtn-ar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a><a class="pbtn line" href="#trabalho">Ver projetos</a></div>
+        </div>
+        <div class="hero-base">
+          <div class="hb-l"><span class="live-dot" aria-hidden="true"></span>Hoyo-hoyo! Estamos em <b>Maputo</b> · <span id="clock">--:--</span></div>
+          <dl class="stats"><div><dt>4</dt><dd>serviços integrados</dd></div><div><dt>99,9%</dt><dd>uptime</dd></div><div><dt>+258</dt><dd>atendimento local</dd></div></dl>
+        </div>
+      </div>
+      <canvas class="cap-wave" id="heroWave" aria-hidden="true"></canvas>
+      <canvas class="burst" id="burst" aria-hidden="true"></canvas>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="processo" aria-labelledby="proc-title">
+  <div class="band"><div class="wrap process-head">
+    <div class="eyebrow"><span>Processo</span><span>Caso: Castros Consultoria</span></div>
+    <h2 id="proc-title">Da primeira conversa ao site <span class="it">no ar.</span></h2>
+    <p>Seguimos o site da Castros Consultoria fase a fase, do primeiro café ao lançamento.</p>
+  </div></div>
+  <div class="band"><div class="pgrid" id="procA">
+    <div class="steps">
+      <article class="step"><div class="step-no">01 / Conversa</div><h3>Começamos pelo negócio, não pelas <span class="it">cores.</span></h3><p>Uma conversa, uma página de notas: para quem é o site, o que tem de fazer e como vamos saber que funciona.</p><blockquote class="glass"><b>Para a Castros Consultoria</b><span>Explicar os serviços de consultoria, listar as próximas formações e transformar visitas em pedidos de contacto.</span></blockquote><div class="step-out">Entrega · brief · 1 página</div></article>
+      <article class="step"><div class="step-no">02 / Mapa do site</div><h3>Todas as páginas, antes do primeiro <span class="it">pixel.</span></h3><p>Combinamos as páginas e como as pessoas passam de uma para a outra. Mudar uma caixa aqui não custa nada; mudá-la depois do lançamento custa maningue.</p><div class="step-out">5 páginas · 1 formulário de contacto</div></article>
+      <article class="step"><div class="step-no">03 / Wireframe</div><h3>Caixas cinzentas, decisões <span class="it">reais.</span></h3><p>Layout e hierarquia sem cor a distrair. O que vem primeiro, o que é botão, o que a visita lê antes de fazer scroll.</p><div class="step-out">Baixa fidelidade · computador + telemóvel</div></article>
+      <article class="step"><div class="step-no">04 / Design</div><h3>Depois, ganha <span class="it">rosto.</span></h3><p>Tipografia, cor e imagem entram no Figma. Vês a página exata e aprova-la antes de escrevermos código.</p><blockquote class="glass"><b>Aprovação antes do código</b><span>O design aprovado é o que se constrói. Não há surpresas entre o protótipo e o site.</span></blockquote><div class="step-out">Figma · páginas + componentes</div></article>
+    </div>
+    <div class="viz" aria-hidden="true">    
+      <div class="win-wrap desk-wrap win-tilt" data-k="winWrap">
+        <div class="win" data-k="win">
+          <div class="chrome">
+            <i></i><i></i><i></i>
+            <span class="lab" data-lab="0">brief.md</span>
+            <span class="lab" data-lab="1">sitemap</span>
+            <span class="lab" data-lab="2">wireframe · início</span>
+            <span class="lab" data-lab="3">Castros — Design</span>
+            <span class="lab" data-lab="4">castros-site — index.html</span>
+            <span class="lab url" data-lab="5"><svg viewBox="0 0 12 12"><rect x="2" y="5" width="8" height="6" rx="1.5" fill="#2a2c31"/><path d="M4 5V3.5a2 2 0 0 1 4 0V5" fill="none" stroke="#2a2c31" stroke-width="1.4"/></svg>castrosconsultoria.co.mz</span>
+            <span class="live" data-k="liveTag">No ar</span>
+          </div>
+          <div class="body">
+            <div class="layer brief" data-k="lBrief">
+              <h4>Castros Consultoria — website</h4>
+              <dl>
+                <dt>Cliente</dt><dd>Consultoria de negócios e empreendedorismo, Maputo</dd>
+                <dt>Para</dt><dd>Empreendedores e empresas que procuram orientação e formação</dd>
+                <dt>Tem de</dt><dd><ul><li>Explicar os serviços de consultoria</li><li>Listar as próximas formações</li><li>Transformar visitas em pedidos de contacto</li></ul></dd>
+                <dt>Língua</dt><dd>Português</dd>
+                <dt>Pronto quando</dt><dd>O cliente aprova o protótipo</dd>
+              </dl>
+            </div>
+
+            <div class="layer sitemap" data-k="lMap">
+              <svg viewBox="0 0 1000 600"><g fill="none" stroke="#020817" stroke-width="1.5">
+                <path d="M500 214 V262 H185 V310 M500 262 H395 V310 M500 262 H605 V310 M500 262 H815 V310"/>
+                <path d="M605 364 V410 H530 V440 M605 410 H680 V440" stroke-dasharray="4 4"/>
+              </g></svg>
+              <div class="node" data-k="homeNode" style="left:430px;top:160px;width:140px">Início<small>página inicial</small></div>
+              <div class="node" style="left:115px;top:310px;width:140px">Sobre<small>sobre</small></div>
+              <div class="node" style="left:325px;top:310px;width:140px">Serviços<small>serviços</small></div>
+              <div class="node" style="left:535px;top:310px;width:140px">Formações<small>formações</small></div>
+              <div class="node" style="left:745px;top:310px;width:140px">Contacto<small>formulário → e-mail</small></div>
+              <div class="node" style="left:470px;top:440px;width:120px;border-style:dashed">Formação<small>detalhe</small></div>
+              <div class="node" style="left:620px;top:440px;width:120px;border-style:dashed">Inscrição<small>inscrição</small></div>
+            </div>
+
+            <div class="layer page" data-k="lPage">
+              <div class="pg wire" data-k="pWire">
+                <b class="dk" style="left:40px;top:19px;width:110px;height:18px"></b>
+                <b style="left:520px;top:24px;width:46px;height:9px"></b><b style="left:590px;top:24px;width:56px;height:9px"></b><b style="left:670px;top:24px;width:66px;height:9px"></b><b style="left:760px;top:24px;width:56px;height:9px"></b>
+                <b class="dk" style="left:860px;top:14px;width:100px;height:30px;border-radius:999px"></b>
+                <b class="dk" style="left:40px;top:120px;width:400px;height:32px"></b><b class="dk" style="left:40px;top:166px;width:440px;height:32px"></b><b class="dk" style="left:40px;top:212px;width:330px;height:32px"></b>
+                <b style="left:40px;top:278px;width:390px;height:10px"></b><b style="left:40px;top:298px;width:300px;height:10px"></b>
+                <b class="dk" style="left:40px;top:340px;width:150px;height:44px;border-radius:999px"></b>
+                <b class="box" style="left:540px;top:96px;width:420px;height:290px;border-radius:16px"></b>
+                <b class="box" style="left:40px;top:420px;width:280px;height:150px;border-radius:12px"></b><b class="box" style="left:360px;top:420px;width:280px;height:150px;border-radius:12px"></b><b class="box" style="left:680px;top:420px;width:280px;height:150px;border-radius:12px"></b>
+              </div>
+              <div class="pg design" data-k="pDesign">
+                <div class="p-nav"><div class="p-logo">Castros<span>.</span></div><span>Sobre</span><span>Serviços</span><span>Formações</span><span>Contacto</span><span class="p-cta">Fale connosco</span></div>
+                <h5>Consultoria para empreendedores e empresas em Maputo.</h5>
+                <p class="p-lead">Gestão, estratégia e formações práticas para quem quer fazer crescer o seu negócio.</p>
+                <div class="p-btn" data-k="pBtn">Marcar conversa</div>
+                <div class="p-img"></div>
+                <div class="p-card" style="left:40px"><i></i><b>Consultoria</b><span>Diagnóstico e plano de acção para o seu negócio.</span></div>
+                <div class="p-card" style="left:360px"><i></i><b>Formações</b><span>Turmas práticas sobre gestão e empreendedorismo.</span></div>
+                <div class="p-card" style="left:680px"><i></i><b>Mentoria</b><span>Acompanhamento próximo, sessão a sessão.</span></div>
+              </div>
+              <div class="select" data-k="pSelect"><i></i><i></i><i></i><i></i><em>Título · Syne 800 · 36/40</em></div>
+            </div>
+
+            <div class="layer panel p-left" data-k="lLeft">
+              <h6>Camadas</h6>
+              <div>▾ Início</div><div>&nbsp;&nbsp;▸ Nav</div><div>&nbsp;&nbsp;▾ Hero</div><div class="sel">&nbsp;&nbsp;&nbsp;&nbsp;T Título</div><div>&nbsp;&nbsp;&nbsp;&nbsp;T Texto</div><div>&nbsp;&nbsp;&nbsp;&nbsp;▢ Botão</div><div>&nbsp;&nbsp;▸ Imagem</div><div>&nbsp;&nbsp;▸ Serviços</div><div>&nbsp;&nbsp;▸ Rodapé</div>
+            </div>
+            <div class="layer panel p-right" data-k="lRight">
+              <h6>Texto</h6>
+              <div class="row"><span>Fonte</span><span>Syne</span></div>
+              <div class="row"><span>Peso</span><span>800</span></div>
+              <div class="row"><span>Tamanho / linha</span><span>36 / 40</span></div>
+              <h6>Cor</h6>
+              <div class="sw"><i style="background:#13294b"></i><i style="background:#b8902f"></i><i style="background:#f6f3ec"></i><i style="background:#ffffff"></i></div>
+              <h6>Layout</h6>
+              <div class="row"><span>W × H</span><span>448 × 120</span></div>
+              <div class="row"><span>X / Y</span><span>40 / 112</span></div>
+              <div class="row"><span>Espaço</span><span>24</span></div>
+            </div>
+
+            <div class="layer vsc" data-k="lCode">
+              <div class="vs-act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class=on><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 8v8M18 10c0 4-6 3-12 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><path d="M16.5 13v7M13 16.5h7"/></svg></div>
+              <div class="vs-side"><h6>Explorador</h6>
+                <div class="f d">⌄ castros-site</div><div class="f d i1">⌄ src</div>
+                <div class="f i2 sel"><b class="fi h">&lt;&gt;</b>index.html</div><div class="f i2"><b class="fi c">#</b>styles.css</div><div class="f i2"><b class="fi j">JS</b>form.js</div>
+                <div class="f d i1">› assets</div><div class="f i1"><b class="fi j">JS</b>deploy.config.js</div><div class="f i1"><b class="fi n">{}</b>package.json</div>
+              </div>
+              <div class="vs-main">
+                <div class="vs-tabs"><span class="on"><b class="fi h">&lt;&gt;</b>index.html<em>×</em></span><span><b class="fi c">#</b>styles.css</span><span><b class="fi j">JS</b>form.js</span></div>
+                <div class="vs-crumb">src › index.html › section.hero</div>
+                <div class="vs-ed"><div class="vs-lines" data-k="codeLines"></div><div class="vs-mini"><i style="width:38%;margin-left:0%;background:#4a5470"></i><i style="width:59%;margin-left:0%;background:#46C6E5"></i><i style="width:70%;margin-left:16%;background:#46C6E5"></i><i style="width:41%;margin-left:16%;background:#46C6E5"></i><i style="width:50%;margin-left:0%;background:#46C6E5"></i><i style="width:23%;margin-left:8%;background:#4a5470"></i><i style="width:22%;margin-left:0%;background:#46C6E5"></i><i style="width:53%;margin-left:8%;background:#46C6E5"></i><i style="width:70%;margin-left:16%;background:#46C6E5"></i><i style="width:32%;margin-left:24%;background:#4a5470"></i><i style="width:21%;margin-left:16%;background:#4a5470"></i><i style="width:43%;margin-left:0%;background:#87ABF8"></i><i style="width:20%;margin-left:16%;background:#87ABF8"></i><i style="width:36%;margin-left:8%;background:#87ABF8"></i><i style="width:52%;margin-left:0%;background:#4a5470"></i><i style="width:37%;margin-left:16%;background:#87ABF8"></i><i style="width:24%;margin-left:16%;background:#4a5470"></i><i style="width:58%;margin-left:0%;background:#B5CBFB"></i><i style="width:24%;margin-left:16%;background:#46C6E5"></i><i style="width:54%;margin-left:0%;background:#4a5470"></i><i style="width:31%;margin-left:8%;background:#4a5470"></i><i style="width:45%;margin-left:8%;background:#4a5470"></i><i style="width:55%;margin-left:8%;background:#B5CBFB"></i><i style="width:37%;margin-left:0%;background:#87ABF8"></i><i style="width:62%;margin-left:0%;background:#46C6E5"></i><i style="width:54%;margin-left:8%;background:#4a5470"></i><i style="width:49%;margin-left:8%;background:#4a5470"></i><i style="width:36%;margin-left:16%;background:#46C6E5"></i><i style="width:25%;margin-left:16%;background:#4a5470"></i><i style="width:28%;margin-left:8%;background:#87ABF8"></i><i style="width:49%;margin-left:8%;background:#46C6E5"></i><i style="width:60%;margin-left:0%;background:#4a5470"></i><i style="width:54%;margin-left:8%;background:#B5CBFB"></i><i style="width:62%;margin-left:8%;background:#4a5470"></i><i style="width:49%;margin-left:16%;background:#4a5470"></i><i style="width:22%;margin-left:0%;background:#B5CBFB"></i><i style="width:48%;margin-left:24%;background:#46C6E5"></i><i style="width:21%;margin-left:24%;background:#B5CBFB"></i><i style="width:59%;margin-left:16%;background:#4a5470"></i><i style="width:36%;margin-left:24%;background:#4a5470"></i><i style="width:60%;margin-left:8%;background:#46C6E5"></i><i style="width:47%;margin-left:8%;background:#87ABF8"></i><i style="width:57%;margin-left:0%;background:#4a5470"></i><i style="width:21%;margin-left:0%;background:#B5CBFB"></i><i style="width:26%;margin-left:24%;background:#87ABF8"></i><i style="width:43%;margin-left:8%;background:#4a5470"></i><b></b></div></div>
+                <div class="vs-panel"><div class="vs-ptabs"><span>Problemas</span><span class="on">Terminal</span><span>Saída</span></div><div class="vs-term" data-k="vsTerm"></div></div>
+              </div>
+              <div class="vs-status"><span class="br">⎇ main</span><span>⊗ 0 &nbsp;⚠ 0</span><span class="sp"></span><span data-k="vsPos">Ln 1, Col 1</span><span>UTF-8</span><span>HTML</span><span class="go">● Ao vivo</span></div>
+            </div>
+            <div class="layer toast" data-k="lToast"><i></i><div><b>castrosconsultoria.co.mz está no ar</b><span>SSL ativo · e-mail ligado · formulário testado</span></div></div>
+
+            <svg class="layer cursor" data-k="lCursor" viewBox="0 0 22 22"><path d="M3 2 L3 18 L7.5 13.8 L10.5 20.5 L13.4 19.2 L10.5 12.6 L16.5 12.6 Z" fill="#020817" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="win-wrap phone-wrap" data-k="phoneWrap">
+        <div class="phone" data-k="phone">
+          <div class="screen">
+            <div class="status">
+              <span>9:41</span><i class="notch"></i>
+              <span class="ph-lab" data-plab="0">brief</span>
+              <span class="ph-lab" data-plab="1">sitemap</span>
+              <span class="ph-lab" data-plab="2">wireframe</span>
+              <span class="ph-lab" data-plab="3">design</span>
+              <span class="ph-lab" data-plab="4">index.html</span>
+              <span class="ph-lab ph-live" data-plab="5">No ar</span>
+            </div>
+            <div class="pbody">
+              <div class="layer brief ph-brief" data-p="brief">
+                <h4>Castros Consultoria — website</h4>
+                <dl>
+                  <dt>Cliente</dt><dd>Consultoria de negócios e empreendedorismo, Maputo</dd>
+                  <dt>Para</dt><dd>Empreendedores e empresas que procuram orientação e formação</dd>
+                  <dt>Tem de</dt><dd><ul><li>Explicar os serviços de consultoria</li><li>Listar as próximas formações</li><li>Transformar visitas em pedidos de contacto</li></ul></dd>
+                  <dt>Língua</dt><dd>Português</dd>
+                  <dt>Pronto quando</dt><dd>O cliente aprova o protótipo</dd>
+                </dl>
+              </div>
+
+              <div class="layer ph-map" data-p="map">
+                <svg viewBox="0 0 360 720"><g fill="none" stroke="#020817" stroke-width="1.5">
+                  <path d="M180 138 V176 H95 V210 M180 176 H265 V210 M180 176 V286 H95 V310 M180 286 H265 V310"/>
+                  <path d="M95 358 V384 H95 V400 M95 384 H265 V400" stroke-dasharray="4 4"/>
+                </g></svg>
+                <div class="node" style="left:125px;top:90px;width:110px">Início<small>página inicial</small></div>
+                <div class="node" style="left:30px;top:210px;width:130px">Sobre<small>sobre</small></div>
+                <div class="node" style="left:200px;top:210px;width:130px">Serviços<small>serviços</small></div>
+                <div class="node" style="left:30px;top:310px;width:130px">Formações<small>formações</small></div>
+                <div class="node" style="left:200px;top:310px;width:130px">Contacto<small>formulário → e-mail</small></div>
+                <div class="node" style="left:30px;top:400px;width:130px;border-style:dashed">Formação<small>detalhe</small></div>
+                <div class="node" style="left:200px;top:400px;width:130px;border-style:dashed">Inscrição<small>inscrição</small></div>
+              </div>
+
+              <div class="layer page ph-page" data-p="page">
+                <div class="pg wire" data-p="wire">
+                  <b class="dk" style="left:20px;top:20px;width:90px;height:16px"></b>
+                  <b class="dk" style="left:314px;top:20px;width:26px;height:16px"></b>
+                  <b class="dk" style="left:20px;top:84px;width:300px;height:26px"></b><b class="dk" style="left:20px;top:118px;width:280px;height:26px"></b><b class="dk" style="left:20px;top:152px;width:310px;height:26px"></b><b class="dk" style="left:20px;top:186px;width:200px;height:26px"></b>
+                  <b style="left:20px;top:240px;width:300px;height:9px"></b><b style="left:20px;top:258px;width:280px;height:9px"></b><b style="left:20px;top:276px;width:180px;height:9px"></b>
+                  <b class="dk" style="left:20px;top:312px;width:160px;height:44px;border-radius:999px"></b>
+                  <b class="box" style="left:20px;top:376px;width:320px;height:170px;border-radius:14px"></b>
+                  <b class="box" style="left:20px;top:566px;width:320px;height:130px;border-radius:12px"></b>
+                </div>
+                <div class="pg design ph-design" data-p="design">
+                  <div class="m-nav"><div class="p-logo">Castros<span>.</span></div><i></i></div>
+                  <h5>Consultoria para empreendedores e empresas em Maputo.</h5>
+                  <p class="p-lead">Gestão, estratégia e formações práticas para quem quer fazer crescer o seu negócio.</p>
+                  <div class="p-btn" data-p="btn">Marcar conversa</div>
+                  <div class="p-img"></div>
+                  <div class="p-card"><i></i><b>Consultoria</b><span>Diagnóstico e plano de acção para o seu negócio.</span></div>
+                </div>
+                <div class="select" data-p="select" style="left:12px;top:76px;width:336px;height:146px"><i></i><i></i><i></i><i></i><em>Título · Syne 800 · 26/30</em></div>
+              </div>
+
+              <div class="layer ph-sheet" data-p="sheet">
+                <i class="grab"></i>
+                <div class="row"><span>Fonte</span><span>Syne · 800</span></div>
+                <div class="row"><span>Tamanho / linha</span><span>26 / 30</span></div>
+                <div class="sw"><i style="background:#13294b"></i><i style="background:#b8902f"></i><i style="background:#f6f3ec"></i><i style="background:#ffffff"></i></div>
+                <div class="row"><span>W × H</span><span>320 × 120</span></div>
+              </div>
+
+              <div class="layer code ph-code" data-p="code">
+                <div class="tabs"><span class="on">index.html</span><span>styles.css</span></div>
+                <div class="code-lines"></div><div class="vs-status ph"><span class="br">⎇ main</span><span class="sp"></span><span>HTML</span><span class="go">● Ao vivo</span></div>
+              </div>
+
+              <div class="layer ph-url" data-p="url"><svg viewBox="0 0 12 12"><rect x="2" y="5" width="8" height="6" rx="1.5" fill="#2a2c31"/><path d="M4 5V3.5a2 2 0 0 1 4 0V5" fill="none" stroke="#2a2c31" stroke-width="1.4"/></svg>castrosconsultoria.co.mz</div>
+              <div class="layer tap" data-p="tap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div></div>
+</section>
+
+<section class="editor band" id="editor" aria-labelledby="ed-title">
+  <div class="ed-grid">
+    <div class="ed-copy">
+      <div class="eyebrow"><span>05 / Editor</span></div>
+      <h2 id="ed-title">Aqui és tu quem <span class="it">decide.</span></h2>
+      <p>Escolhe o tipo de negócio, e o modelo já vem pronto a editar. Mudas as cores, a navbar, o hero, os cartões e as tuas imagens, e vês o resultado na hora.</p>
+      <ol><li>Escolhe o serviço</li><li>Ajusta o estilo</li><li>Recebe a proposta em PDF</li></ol>
+    </div>
+    <div class="ed-win" id="edWin">
+      <div class="chrome ed-chrome"><i></i><i></i><i></i><span class="lab" id="edUrl">o-teu-site.co.mz — editor</span><span class="live">Ao vivo</span></div>
+      <div class="ed-pills" role="group" aria-label="Tipo de negócio" id="edPills"></div>
+      <div class="ed-body">
+        <form class="ed-panel" id="edPanel" onsubmit="return false">
+          <fieldset class="ctl"><legend>Cores</legend><div class="palettes" id="edPal"></div><label class="picker"><input type="color" id="edAccent" value="#185DF1"> Cor de destaque à tua escolha</label></fieldset>
+          <fieldset class="ctl"><legend>Navbar</legend><div class="seg" id="edNav"></div></fieldset>
+          <fieldset class="ctl"><legend>Hero</legend><div class="seg" id="edHero"></div></fieldset>
+          <fieldset class="ctl"><legend>Elementos</legend>
+            <label class="tog">Cartões <input type="checkbox" id="edCards" checked></label>
+            <label class="tog">Elementos decorativos <input type="checkbox" id="edDecor" checked></label>
+            <label class="tog">Animações <input type="checkbox" id="edAnim" checked></label>
+          </fieldset>
+          <fieldset class="ctl"><legend>Imagens</legend><div class="upload"><label for="edImg">Carregar a minha imagem</label><input type="file" id="edImg" accept="image/*"><button type="button" id="edImgReset" hidden>Repor</button></div><span class="ed-note">A imagem fica no teu navegador. Não é enviada.</span></fieldset>
+          <fieldset class="ctl"><legend>Comentários</legend><textarea id="edNotes" placeholder="Ex.: quero botão de WhatsApp fixo e uma página de menu."></textarea></fieldset>
+        </form>
+        <div class="ed-stage">
+          <div class="pv-frame" id="pvFrame"><div class="pv" id="pv"></div></div>
+          <div class="ed-actions"><span class="note" id="edSummary"></span><button class="pbtn solid" type="button" id="edPropose">Receber a minha proposta <span class="pbtn-ar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></button><button class="pbtn line" type="button" id="edNext">Seguir em frente →</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="processoB" aria-label="Processo: código e lançamento">
+  <div class="band"><div class="pgrid" id="procB">
+    <div class="steps">
+      <article class="step"><div class="step-no">06 / Código</div><h3>Feito à mão, feito para <span class="it">carregar</span> depressa.</h3><p>Transformamos o design aprovado em código limpo, que abre rápido num telemóvel com dados móveis, até dentro do chapa.</p><div class="step-out">Desenvolvido com tecnologias de ponta</div></article>
+      <article class="step"><div class="step-no">07 / Lançamento</div><h3>No ar, e <span class="it">acompanhado.</span></h3><p>Tratamos do domínio, do alojamento e do e-mail, e testamos o formulário de ponta a ponta antes de abrir as portas.</p><div class="step-out">Domínio · alojamento · e-mail</div></article>
+    </div>
+    <div class="viz" aria-hidden="true">    
+      <div class="win-wrap desk-wrap win-tilt" data-k="winWrap">
+        <div class="win" data-k="win">
+          <div class="chrome">
+            <i></i><i></i><i></i>
+            <span class="lab" data-lab="0">brief.md</span>
+            <span class="lab" data-lab="1">sitemap</span>
+            <span class="lab" data-lab="2">wireframe · início</span>
+            <span class="lab" data-lab="3">Castros — Design</span>
+            <span class="lab" data-lab="4">castros-site — index.html</span>
+            <span class="lab url" data-lab="5"><svg viewBox="0 0 12 12"><rect x="2" y="5" width="8" height="6" rx="1.5" fill="#2a2c31"/><path d="M4 5V3.5a2 2 0 0 1 4 0V5" fill="none" stroke="#2a2c31" stroke-width="1.4"/></svg>castrosconsultoria.co.mz</span>
+            <span class="live" data-k="liveTag">No ar</span>
+          </div>
+          <div class="body">
+            <div class="layer brief" data-k="lBrief">
+              <h4>Castros Consultoria — website</h4>
+              <dl>
+                <dt>Cliente</dt><dd>Consultoria de negócios e empreendedorismo, Maputo</dd>
+                <dt>Para</dt><dd>Empreendedores e empresas que procuram orientação e formação</dd>
+                <dt>Tem de</dt><dd><ul><li>Explicar os serviços de consultoria</li><li>Listar as próximas formações</li><li>Transformar visitas em pedidos de contacto</li></ul></dd>
+                <dt>Língua</dt><dd>Português</dd>
+                <dt>Pronto quando</dt><dd>O cliente aprova o protótipo</dd>
+              </dl>
+            </div>
+
+            <div class="layer sitemap" data-k="lMap">
+              <svg viewBox="0 0 1000 600"><g fill="none" stroke="#020817" stroke-width="1.5">
+                <path d="M500 214 V262 H185 V310 M500 262 H395 V310 M500 262 H605 V310 M500 262 H815 V310"/>
+                <path d="M605 364 V410 H530 V440 M605 410 H680 V440" stroke-dasharray="4 4"/>
+              </g></svg>
+              <div class="node" data-k="homeNode" style="left:430px;top:160px;width:140px">Início<small>página inicial</small></div>
+              <div class="node" style="left:115px;top:310px;width:140px">Sobre<small>sobre</small></div>
+              <div class="node" style="left:325px;top:310px;width:140px">Serviços<small>serviços</small></div>
+              <div class="node" style="left:535px;top:310px;width:140px">Formações<small>formações</small></div>
+              <div class="node" style="left:745px;top:310px;width:140px">Contacto<small>formulário → e-mail</small></div>
+              <div class="node" style="left:470px;top:440px;width:120px;border-style:dashed">Formação<small>detalhe</small></div>
+              <div class="node" style="left:620px;top:440px;width:120px;border-style:dashed">Inscrição<small>inscrição</small></div>
+            </div>
+
+            <div class="layer page" data-k="lPage">
+              <div class="pg wire" data-k="pWire">
+                <b class="dk" style="left:40px;top:19px;width:110px;height:18px"></b>
+                <b style="left:520px;top:24px;width:46px;height:9px"></b><b style="left:590px;top:24px;width:56px;height:9px"></b><b style="left:670px;top:24px;width:66px;height:9px"></b><b style="left:760px;top:24px;width:56px;height:9px"></b>
+                <b class="dk" style="left:860px;top:14px;width:100px;height:30px;border-radius:999px"></b>
+                <b class="dk" style="left:40px;top:120px;width:400px;height:32px"></b><b class="dk" style="left:40px;top:166px;width:440px;height:32px"></b><b class="dk" style="left:40px;top:212px;width:330px;height:32px"></b>
+                <b style="left:40px;top:278px;width:390px;height:10px"></b><b style="left:40px;top:298px;width:300px;height:10px"></b>
+                <b class="dk" style="left:40px;top:340px;width:150px;height:44px;border-radius:999px"></b>
+                <b class="box" style="left:540px;top:96px;width:420px;height:290px;border-radius:16px"></b>
+                <b class="box" style="left:40px;top:420px;width:280px;height:150px;border-radius:12px"></b><b class="box" style="left:360px;top:420px;width:280px;height:150px;border-radius:12px"></b><b class="box" style="left:680px;top:420px;width:280px;height:150px;border-radius:12px"></b>
+              </div>
+              <div class="pg design" data-k="pDesign">
+                <div class="p-nav"><div class="p-logo">Castros<span>.</span></div><span>Sobre</span><span>Serviços</span><span>Formações</span><span>Contacto</span><span class="p-cta">Fale connosco</span></div>
+                <h5>Consultoria para empreendedores e empresas em Maputo.</h5>
+                <p class="p-lead">Gestão, estratégia e formações práticas para quem quer fazer crescer o seu negócio.</p>
+                <div class="p-btn" data-k="pBtn">Marcar conversa</div>
+                <div class="p-img"></div>
+                <div class="p-card" style="left:40px"><i></i><b>Consultoria</b><span>Diagnóstico e plano de acção para o seu negócio.</span></div>
+                <div class="p-card" style="left:360px"><i></i><b>Formações</b><span>Turmas práticas sobre gestão e empreendedorismo.</span></div>
+                <div class="p-card" style="left:680px"><i></i><b>Mentoria</b><span>Acompanhamento próximo, sessão a sessão.</span></div>
+              </div>
+              <div class="select" data-k="pSelect"><i></i><i></i><i></i><i></i><em>Título · Syne 800 · 36/40</em></div>
+            </div>
+
+            <div class="layer panel p-left" data-k="lLeft">
+              <h6>Camadas</h6>
+              <div>▾ Início</div><div>&nbsp;&nbsp;▸ Nav</div><div>&nbsp;&nbsp;▾ Hero</div><div class="sel">&nbsp;&nbsp;&nbsp;&nbsp;T Título</div><div>&nbsp;&nbsp;&nbsp;&nbsp;T Texto</div><div>&nbsp;&nbsp;&nbsp;&nbsp;▢ Botão</div><div>&nbsp;&nbsp;▸ Imagem</div><div>&nbsp;&nbsp;▸ Serviços</div><div>&nbsp;&nbsp;▸ Rodapé</div>
+            </div>
+            <div class="layer panel p-right" data-k="lRight">
+              <h6>Texto</h6>
+              <div class="row"><span>Fonte</span><span>Syne</span></div>
+              <div class="row"><span>Peso</span><span>800</span></div>
+              <div class="row"><span>Tamanho / linha</span><span>36 / 40</span></div>
+              <h6>Cor</h6>
+              <div class="sw"><i style="background:#13294b"></i><i style="background:#b8902f"></i><i style="background:#f6f3ec"></i><i style="background:#ffffff"></i></div>
+              <h6>Layout</h6>
+              <div class="row"><span>W × H</span><span>448 × 120</span></div>
+              <div class="row"><span>X / Y</span><span>40 / 112</span></div>
+              <div class="row"><span>Espaço</span><span>24</span></div>
+            </div>
+
+            <div class="layer vsc" data-k="lCode">
+              <div class="vs-act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class=on><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 8v8M18 10c0 4-6 3-12 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><path d="M16.5 13v7M13 16.5h7"/></svg></div>
+              <div class="vs-side"><h6>Explorador</h6>
+                <div class="f d">⌄ castros-site</div><div class="f d i1">⌄ src</div>
+                <div class="f i2 sel"><b class="fi h">&lt;&gt;</b>index.html</div><div class="f i2"><b class="fi c">#</b>styles.css</div><div class="f i2"><b class="fi j">JS</b>form.js</div>
+                <div class="f d i1">› assets</div><div class="f i1"><b class="fi j">JS</b>deploy.config.js</div><div class="f i1"><b class="fi n">{}</b>package.json</div>
+              </div>
+              <div class="vs-main">
+                <div class="vs-tabs"><span class="on"><b class="fi h">&lt;&gt;</b>index.html<em>×</em></span><span><b class="fi c">#</b>styles.css</span><span><b class="fi j">JS</b>form.js</span></div>
+                <div class="vs-crumb">src › index.html › section.hero</div>
+                <div class="vs-ed"><div class="vs-lines" data-k="codeLines"></div><div class="vs-mini"><i style="width:38%;margin-left:0%;background:#4a5470"></i><i style="width:59%;margin-left:0%;background:#46C6E5"></i><i style="width:70%;margin-left:16%;background:#46C6E5"></i><i style="width:41%;margin-left:16%;background:#46C6E5"></i><i style="width:50%;margin-left:0%;background:#46C6E5"></i><i style="width:23%;margin-left:8%;background:#4a5470"></i><i style="width:22%;margin-left:0%;background:#46C6E5"></i><i style="width:53%;margin-left:8%;background:#46C6E5"></i><i style="width:70%;margin-left:16%;background:#46C6E5"></i><i style="width:32%;margin-left:24%;background:#4a5470"></i><i style="width:21%;margin-left:16%;background:#4a5470"></i><i style="width:43%;margin-left:0%;background:#87ABF8"></i><i style="width:20%;margin-left:16%;background:#87ABF8"></i><i style="width:36%;margin-left:8%;background:#87ABF8"></i><i style="width:52%;margin-left:0%;background:#4a5470"></i><i style="width:37%;margin-left:16%;background:#87ABF8"></i><i style="width:24%;margin-left:16%;background:#4a5470"></i><i style="width:58%;margin-left:0%;background:#B5CBFB"></i><i style="width:24%;margin-left:16%;background:#46C6E5"></i><i style="width:54%;margin-left:0%;background:#4a5470"></i><i style="width:31%;margin-left:8%;background:#4a5470"></i><i style="width:45%;margin-left:8%;background:#4a5470"></i><i style="width:55%;margin-left:8%;background:#B5CBFB"></i><i style="width:37%;margin-left:0%;background:#87ABF8"></i><i style="width:62%;margin-left:0%;background:#46C6E5"></i><i style="width:54%;margin-left:8%;background:#4a5470"></i><i style="width:49%;margin-left:8%;background:#4a5470"></i><i style="width:36%;margin-left:16%;background:#46C6E5"></i><i style="width:25%;margin-left:16%;background:#4a5470"></i><i style="width:28%;margin-left:8%;background:#87ABF8"></i><i style="width:49%;margin-left:8%;background:#46C6E5"></i><i style="width:60%;margin-left:0%;background:#4a5470"></i><i style="width:54%;margin-left:8%;background:#B5CBFB"></i><i style="width:62%;margin-left:8%;background:#4a5470"></i><i style="width:49%;margin-left:16%;background:#4a5470"></i><i style="width:22%;margin-left:0%;background:#B5CBFB"></i><i style="width:48%;margin-left:24%;background:#46C6E5"></i><i style="width:21%;margin-left:24%;background:#B5CBFB"></i><i style="width:59%;margin-left:16%;background:#4a5470"></i><i style="width:36%;margin-left:24%;background:#4a5470"></i><i style="width:60%;margin-left:8%;background:#46C6E5"></i><i style="width:47%;margin-left:8%;background:#87ABF8"></i><i style="width:57%;margin-left:0%;background:#4a5470"></i><i style="width:21%;margin-left:0%;background:#B5CBFB"></i><i style="width:26%;margin-left:24%;background:#87ABF8"></i><i style="width:43%;margin-left:8%;background:#4a5470"></i><b></b></div></div>
+                <div class="vs-panel"><div class="vs-ptabs"><span>Problemas</span><span class="on">Terminal</span><span>Saída</span></div><div class="vs-term" data-k="vsTerm"></div></div>
+              </div>
+              <div class="vs-status"><span class="br">⎇ main</span><span>⊗ 0 &nbsp;⚠ 0</span><span class="sp"></span><span data-k="vsPos">Ln 1, Col 1</span><span>UTF-8</span><span>HTML</span><span class="go">● Ao vivo</span></div>
+            </div>
+            <div class="layer toast" data-k="lToast"><i></i><div><b>castrosconsultoria.co.mz está no ar</b><span>SSL ativo · e-mail ligado · formulário testado</span></div></div>
+
+            <svg class="layer cursor" data-k="lCursor" viewBox="0 0 22 22"><path d="M3 2 L3 18 L7.5 13.8 L10.5 20.5 L13.4 19.2 L10.5 12.6 L16.5 12.6 Z" fill="#020817" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="win-wrap phone-wrap" data-k="phoneWrap">
+        <div class="phone" data-k="phone">
+          <div class="screen">
+            <div class="status">
+              <span>9:41</span><i class="notch"></i>
+              <span class="ph-lab" data-plab="0">brief</span>
+              <span class="ph-lab" data-plab="1">sitemap</span>
+              <span class="ph-lab" data-plab="2">wireframe</span>
+              <span class="ph-lab" data-plab="3">design</span>
+              <span class="ph-lab" data-plab="4">index.html</span>
+              <span class="ph-lab ph-live" data-plab="5">No ar</span>
+            </div>
+            <div class="pbody">
+              <div class="layer brief ph-brief" data-p="brief">
+                <h4>Castros Consultoria — website</h4>
+                <dl>
+                  <dt>Cliente</dt><dd>Consultoria de negócios e empreendedorismo, Maputo</dd>
+                  <dt>Para</dt><dd>Empreendedores e empresas que procuram orientação e formação</dd>
+                  <dt>Tem de</dt><dd><ul><li>Explicar os serviços de consultoria</li><li>Listar as próximas formações</li><li>Transformar visitas em pedidos de contacto</li></ul></dd>
+                  <dt>Língua</dt><dd>Português</dd>
+                  <dt>Pronto quando</dt><dd>O cliente aprova o protótipo</dd>
+                </dl>
+              </div>
+
+              <div class="layer ph-map" data-p="map">
+                <svg viewBox="0 0 360 720"><g fill="none" stroke="#020817" stroke-width="1.5">
+                  <path d="M180 138 V176 H95 V210 M180 176 H265 V210 M180 176 V286 H95 V310 M180 286 H265 V310"/>
+                  <path d="M95 358 V384 H95 V400 M95 384 H265 V400" stroke-dasharray="4 4"/>
+                </g></svg>
+                <div class="node" style="left:125px;top:90px;width:110px">Início<small>página inicial</small></div>
+                <div class="node" style="left:30px;top:210px;width:130px">Sobre<small>sobre</small></div>
+                <div class="node" style="left:200px;top:210px;width:130px">Serviços<small>serviços</small></div>
+                <div class="node" style="left:30px;top:310px;width:130px">Formações<small>formações</small></div>
+                <div class="node" style="left:200px;top:310px;width:130px">Contacto<small>formulário → e-mail</small></div>
+                <div class="node" style="left:30px;top:400px;width:130px;border-style:dashed">Formação<small>detalhe</small></div>
+                <div class="node" style="left:200px;top:400px;width:130px;border-style:dashed">Inscrição<small>inscrição</small></div>
+              </div>
+
+              <div class="layer page ph-page" data-p="page">
+                <div class="pg wire" data-p="wire">
+                  <b class="dk" style="left:20px;top:20px;width:90px;height:16px"></b>
+                  <b class="dk" style="left:314px;top:20px;width:26px;height:16px"></b>
+                  <b class="dk" style="left:20px;top:84px;width:300px;height:26px"></b><b class="dk" style="left:20px;top:118px;width:280px;height:26px"></b><b class="dk" style="left:20px;top:152px;width:310px;height:26px"></b><b class="dk" style="left:20px;top:186px;width:200px;height:26px"></b>
+                  <b style="left:20px;top:240px;width:300px;height:9px"></b><b style="left:20px;top:258px;width:280px;height:9px"></b><b style="left:20px;top:276px;width:180px;height:9px"></b>
+                  <b class="dk" style="left:20px;top:312px;width:160px;height:44px;border-radius:999px"></b>
+                  <b class="box" style="left:20px;top:376px;width:320px;height:170px;border-radius:14px"></b>
+                  <b class="box" style="left:20px;top:566px;width:320px;height:130px;border-radius:12px"></b>
+                </div>
+                <div class="pg design ph-design" data-p="design">
+                  <div class="m-nav"><div class="p-logo">Castros<span>.</span></div><i></i></div>
+                  <h5>Consultoria para empreendedores e empresas em Maputo.</h5>
+                  <p class="p-lead">Gestão, estratégia e formações práticas para quem quer fazer crescer o seu negócio.</p>
+                  <div class="p-btn" data-p="btn">Marcar conversa</div>
+                  <div class="p-img"></div>
+                  <div class="p-card"><i></i><b>Consultoria</b><span>Diagnóstico e plano de acção para o seu negócio.</span></div>
+                </div>
+                <div class="select" data-p="select" style="left:12px;top:76px;width:336px;height:146px"><i></i><i></i><i></i><i></i><em>Título · Syne 800 · 26/30</em></div>
+              </div>
+
+              <div class="layer ph-sheet" data-p="sheet">
+                <i class="grab"></i>
+                <div class="row"><span>Fonte</span><span>Syne · 800</span></div>
+                <div class="row"><span>Tamanho / linha</span><span>26 / 30</span></div>
+                <div class="sw"><i style="background:#13294b"></i><i style="background:#b8902f"></i><i style="background:#f6f3ec"></i><i style="background:#ffffff"></i></div>
+                <div class="row"><span>W × H</span><span>320 × 120</span></div>
+              </div>
+
+              <div class="layer code ph-code" data-p="code">
+                <div class="tabs"><span class="on">index.html</span><span>styles.css</span></div>
+                <div class="code-lines"></div><div class="vs-status ph"><span class="br">⎇ main</span><span class="sp"></span><span>HTML</span><span class="go">● Ao vivo</span></div>
+              </div>
+
+              <div class="layer ph-url" data-p="url"><svg viewBox="0 0 12 12"><rect x="2" y="5" width="8" height="6" rx="1.5" fill="#2a2c31"/><path d="M4 5V3.5a2 2 0 0 1 4 0V5" fill="none" stroke="#2a2c31" stroke-width="1.4"/></svg>castrosconsultoria.co.mz</div>
+              <div class="layer tap" data-p="tap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div></div>
+</section>
+
+<section class="maint" id="manutencao" aria-labelledby="mt-title">
+  <div class="m-stage" id="mStage">
+    <div class="m-black" id="mBlack" aria-hidden="true"></div>
+    <div class="m-world" id="mWorld">
+      <img id="mScene" src="assets/img/scene-laptop.jpg" alt="As mesmas duas pessoas de costas, agora à noite com o site no ecrã" draggable="false">
+      <div class="m-tint" aria-hidden="true"></div>
+      <div class="m-glow" id="mGlow" aria-hidden="true"></div>
+    </div>
+    <div class="m-copy" id="mCopyA">
+      <div class="step-no">08 / Hospedagem e manutenção</div>
+      <h3 id="mt-title">Continuamos contigo depois do <span class="it">lançamento.</span></h3>
+      <p>Alojamos o site no nosso servidor e tratamos das atualizações, das cópias de segurança e da monitorização, para ele continuar rápido e seguro.</p>
+      <div class="chips"><span class="chip live">Servidor online</span><span class="chip">Backups diários</span><span class="chip">SSL</span><span class="chip">Atualizações</span></div>
+    </div>
+    <div class="monitor" id="monitor" aria-hidden="true">
+      <div class="chrome mon-chrome"><i></i><i></i><i></i><span class="lab">castros-site — servidor OS · Maputo</span><span class="live">Online</span></div>
+      <div class="mon-body">
+        <div class="mon-site"><div class="mon-url"><svg viewBox="0 0 12 12"><rect x="2" y="5" width="8" height="6" rx="1.5" fill="#2a2c31"/><path d="M4 5V3.5a2 2 0 0 1 4 0V5" fill="none" stroke="#2a2c31" stroke-width="1.4"/></svg>castrosconsultoria.co.mz</div><img src="assets/img/castros.jpg" alt=""></div>
+        <div class="mon-code"><div class="mc-tabs"><span class="on">deploy.config.js</span><span>nginx.conf</span></div><div class="mc-lines" id="monCode"></div></div>
+        <div class="mon-term"><div class="mc-tabs"><span class="on">Terminal</span><span>Logs</span><span class="up">uptime 99,9 %</span></div><div class="mc-term" id="monTerm"></div></div>
+      </div>
+    </div>
+    <div class="m-end glass" id="mCopyB">
+      <span class="step-no">08 / Manutenção</span>
+      <b>Nós ficamos de olho no site. Tu ficas tranquilo no negócio.</b>
+      <div class="chips"><span class="chip live">Online agora</span><span class="chip">Backups 03:00</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto band" id="manifesto" aria-labelledby="mf-title">
+  <canvas class="mf-edge" id="mfWave" aria-hidden="true"></canvas>
+  <div class="mf-bg" aria-hidden="true"></div>
+  <div class="mf-pin">
+    <div class="mf-inner">
+      <div class="eyebrow"><span>Manifesto</span></div>
+      <h2 class="split" id="mf-title">Marca primeiro. Código <span class="it">depois.</span></h2>
+      <p class="split" id="mfText">Desenhamos, desenvolvemos e alojamos sites com <span class="k1">movimento, ritmo e identidade.</span> Cada projeto nasce da <span class="k2">tua marca,</span> não de um modelo pronto.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services band" id="servicos" aria-labelledby="sv-title">
+  <div class="sv-bg" aria-hidden="true">
+    <svg class="giant" viewBox="0 0 512 512" fill="currentColor"><use href="#os-s"/></svg>
+    <svg class="rings" viewBox="0 0 800 800" fill="none" stroke="#46C6E5" stroke-width="1.5"><circle cx="400" cy="400" r="120"/><circle cx="400" cy="400" r="190"/><circle cx="400" cy="400" r="260"/><circle cx="400" cy="400" r="330"/><circle cx="400" cy="400" r="395"/></svg>
+    <div class="capstrip"></div>
+  </div>
+  <div class="wrap">
+    <div class="sv-head">
+      <div class="eyebrow"><span>Serviços</span><span>Tudo num só lugar</span></div>
+      <h2 id="sv-title">Do rabisco ao <span class="it">servidor.</span></h2>
+      <p>Quatro serviços que funcionam juntos. Podes começar por um e juntar os outros quando o negócio pedir.</p>
+    </div>
+    <div class="sv-grid"><article class="svc glass tilt" tabindex="0"><span class="num" aria-hidden="true">01</span><span class="cut"><svg viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l6 7.5-5 10.5h-2L6 10z"/><path d="M12 10v6"/><circle fill="#46C6E5" stroke="none" cx="12" cy="10" r="1.7"/></svg></span><h3>Design</h3><p>Identidade visual, UI/UX e protótipos no Figma, aprovados antes do código.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Logótipo e guia de marca</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Protótipo que se pode clicar</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Templates de redes sociais</span></li></ul><a class="link" href="#contacto" data-need="design">Pedir orçamento <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></article><article class="svc glass tilt" tabindex="0"><span class="num" aria-hidden="true">02</span><span class="cut"><svg viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/><path d="M13.5 4.5l-3 15"/></svg></span><h3>Desenvolvimento</h3><p>Sites institucionais, lojas online, sistemas e aplicações à medida.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sites rápidos com dados móveis</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sistemas e aplicações web</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Painel para editar conteúdos</span></li></ul><a class="link" href="#contacto" data-need="desenvolvimento">Pedir orçamento <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></article><article class="svc glass tilt" tabindex="0"><span class="num" aria-hidden="true">03</span><span class="cut"><svg viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4" width="17" height="6.5" rx="1.6"/><rect x="3.5" y="13.5" width="17" height="6.5" rx="1.6"/><path d="M7 7.25h4M7 16.75h4"/><circle fill="#46C6E5" stroke="none" cx="16.5" cy="7.25" r="1.3"/></svg></span><h3>Hospedagem</h3><p>Domínio, alojamento e e-mail profissional, com SEO básico ou avançado.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>SEO básico e avançado</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Cópias de segurança e SSL</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Google Search Console</span></li></ul><a class="link" href="#contacto" data-need="hospedagem">Pedir orçamento <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></article><article class="svc glass tilt" tabindex="0"><span class="num" aria-hidden="true">04</span><span class="cut"><svg viewBox="0 0 24 24" fill="none" stroke="#F3F7FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><rect x="15.5" y="15.5" width="5" height="5" rx="1.2"/><path d="M8.5 6h6.5a3 3 0 013 3v6.5"/><path d="M6 8.5V15a3 3 0 003 3h6.5"/><circle fill="#46C6E5" stroke="none" cx="6" cy="6" r="1"/></svg></span><h3>Automação</h3><p>WhatsApp, formulários e pedidos que correm sozinhos e chegam organizados.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Respostas automáticas no WhatsApp</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Pedidos direto para uma folha ou CRM</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#8AB640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Lembretes e faturas</span></li></ul><a class="link" href="#contacto" data-need="automação">Pedir orçamento <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></article></div>
+  </div>
+</section>
+
+<section class="work" id="trabalho" aria-labelledby="work-title">
+  <div class="work-pin" id="workPin">
+    <div class="topo" aria-hidden="true"></div>
+    <div class="band"><div class="wrap work-head" id="workHead">
+      <div class="sec-h"><div class="eyebrow"><span>Trabalho</span><span>Clientes e conceitos</span></div><h2 id="work-title">Sites que já <span class="it">trabalham.</span></h2></div>
+      <div class="work-meta" aria-hidden="true"><span class="wno">01 / 06</span><div class="work-bar"><i></i></div></div>
+    </div></div>
+    <div class="work-track" id="workTrack" tabindex="0" aria-label="Projetos"><article class="case tilt" tabindex="0" data-client="01 · Consultoria · Maputo" data-title="Castros &lt;span class=&quot;it&quot;&gt;Consultoria&lt;/span&gt;" data-tags="Site institucional · Serviços · Contacto em 3 passos"><div class="thumb"><img src="assets/img/castros.jpg" alt="Página inicial de Castros Consultoria" loading="lazy" draggable="false"></div><div class="meta"><span class="cn">01</span><div class="ct"><h3>Castros Consultoria</h3><p>Site institucional com serviços, eventos e contacto direto pelo WhatsApp.</p></div><span class="tag2 client">Cliente</span></div></article><article class="case tilt" tabindex="0" data-client="02 · Loja online" data-title="Self&lt;span class=&quot;it&quot;&gt;Xpress&lt;/span&gt;" data-tags="E-commerce · WhatsApp · Carrinho"><div class="thumb"><img src="assets/heroes/03-selfxpress.webp" alt="Página inicial de SelfXpress" loading="lazy" draggable="false"></div><div class="meta"><span class="cn">02</span><div class="ct"><h3>SelfXpress</h3><p>Loja online com integração WhatsApp e carrinho que gera a mensagem pronta.</p></div><span class="tag2 client">Cliente</span></div></article><article class="case tilt" tabindex="0" data-client="03 · Restaurante · conceito" data-title="House of &lt;span class=&quot;it&quot;&gt;Flavors&lt;/span&gt;" data-tags="Menu · Reservas · Entregas"><div class="thumb"><img src="assets/heroes/01-house-of-flavors.webp" alt="Página inicial de House of Flavors" loading="lazy" draggable="false"></div><div class="meta"><span class="cn">03</span><div class="ct"><h3>House of Flavors</h3><p>Restaurante com menu, reservas, entregas e pagamento.</p></div><span class="tag2">Conceito</span></div></article><article class="case tilt" tabindex="0" data-client="04 · Turismo · Praia do Tofo" data-title="Turismo à beira do &lt;span class=&quot;it&quot;&gt;Índico.&lt;/span&gt;" data-tags="Reserva direta · Datas e hóspedes · PT / EN"><div class="thumb"><img src="assets/heroes/05-mare.webp" alt="Página inicial de Turismo no Tofo" loading="lazy" draggable="false"></div><div class="meta"><span class="cn">04</span><div class="ct"><h3>Turismo no Tofo</h3><p>Lodge na Praia do Tofo com reserva direta, escolha de datas e hóspedes, em português e inglês.</p></div><span class="tag2">Conceito</span></div></article><article class="case tilt" tabindex="0" data-client="05 · Loja online · Maputo" data-title="Padrões que contam &lt;span class=&quot;it&quot;&gt;histórias.&lt;/span&gt;" data-tags="Loja online · Fotografia local · Mobile first"><div class="thumb"><img src="assets/heroes/04-kapulana-co.webp" alt="Página inicial de Capulana & Co." loading="lazy" draggable="false"></div><div class="meta"><span class="cn">05</span><div class="ct"><h3>Capulana & Co.</h3><p>Loja online de capulanas escolhidas a dedo nos mercados de Maputo, com encomenda por WhatsApp.</p></div><span class="tag2">Conceito</span></div></article>
+      <article class="case cta-card tilt" tabindex="0" data-client="06 · O teu negócio" data-title="Bora &lt;span class=&quot;it&quot;&gt;conversar?&lt;/span&gt;" data-tags="Website · Sistemas · Hospedagem · Automação">
+        <svg class="cta-ondas" viewBox="0 0 760 1000" fill="none" aria-hidden="true"><path class="o" style="--i:0;--s:0" d="M380 220A30 30 0 0 0 380 280"/><path class="o" style="--i:1;--s:0" d="M380 193A57 57 0 0 0 380 307"/><path class="o" style="--i:2;--s:0" d="M380 166A84 84 0 0 0 380 334"/><path class="o hi" style="--i:3;--s:0" d="M380 139A111 111 0 0 0 380 361"/><path class="o" style="--i:4;--s:0" d="M380 112A138 138 0 0 0 380 388"/><path class="o" style="--i:5;--s:0" d="M380 85A165 165 0 0 0 380 415"/><path class="o" style="--i:6;--s:0" d="M380 58A192 192 0 0 0 380 442"/><path class="o" style="--i:7;--s:0" d="M380 31A219 219 0 0 0 380 469"/><path class="o hi" style="--i:8;--s:0" d="M380 4A246 246 0 0 0 380 496"/><path class="o" style="--i:9;--s:0" d="M380 -23A273 273 0 0 0 380 523"/><path class="o" style="--i:10;--s:0" d="M380 -50A300 300 0 0 0 380 550"/><path class="o" style="--i:11;--s:0" d="M380 -77A327 327 0 0 0 380 577"/><path class="o" style="--i:12;--s:0" d="M380 -104A354 354 0 0 0 380 604"/><path class="o" style="--i:13;--s:0" d="M380 -131A381 381 0 0 0 380 631"/><path class="o" style="--i:0;--s:1" d="M380 720A30 30 0 0 1 380 780"/><path class="o" style="--i:1;--s:1" d="M380 693A57 57 0 0 1 380 807"/><path class="o" style="--i:2;--s:1" d="M380 666A84 84 0 0 1 380 834"/><path class="o" style="--i:3;--s:1" d="M380 639A111 111 0 0 1 380 861"/><path class="o" style="--i:4;--s:1" d="M380 612A138 138 0 0 1 380 888"/><path class="o hi" style="--i:5;--s:1" d="M380 585A165 165 0 0 1 380 915"/><path class="o" style="--i:6;--s:1" d="M380 558A192 192 0 0 1 380 942"/><path class="o" style="--i:7;--s:1" d="M380 531A219 219 0 0 1 380 969"/><path class="o" style="--i:8;--s:1" d="M380 504A246 246 0 0 1 380 996"/><path class="o" style="--i:9;--s:1" d="M380 477A273 273 0 0 1 380 1023"/><path class="o hi" style="--i:10;--s:1" d="M380 450A300 300 0 0 1 380 1050"/><path class="o" style="--i:11;--s:1" d="M380 423A327 327 0 0 1 380 1077"/><path class="o" style="--i:12;--s:1" d="M380 396A354 354 0 0 1 380 1104"/><path class="o" style="--i:13;--s:1" d="M380 369A381 381 0 0 1 380 1131"/></svg>
+        <div class="cta-in">
+          <span class="tag2">06 · O teu</span>
+          <h3>Seja o próximo na nossa <span class="it">lista.</span></h3>
+          <p>Tens um negócio em Moçambique e precisas de um site que trabalhe por ti? Bora conversar.</p>
+          <a class="pbtn solid" href="#contacto">Começar projeto <span class="pbtn-ar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        </div>
+      </article>
+    </div>
+    <div class="wcap" id="wcap" aria-live="polite"><span class="cl"></span><h3></h3><span class="tags"></span></div>
+    <div class="wfoot"><div class="work-meta"><span class="wno">01 / 06</span><div class="work-bar"><i></i></div></div><a class="npill solid" href="#contacto">Começar o teu <span class="ar" aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+
+<section class="team band" id="equipa" aria-labelledby="team-title">
+  <div class="tm-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-h"><div class="eyebrow"><span>Equipa</span><span>Feito à mão em Maputo</span></div><h2 id="team-title">Quem está por trás da <span class="it">OS.</span></h2>
+      <p class="tm-sub">Como na talha makonde, cada site é esculpido à mão para a marca, não tirado de um modelo pronto.</p></div>
+    <div class="team-grid">
+      <article class="person tilt" tabindex="0"><div class="avatar" aria-hidden="true">FS</div><div><h3>Francisco Ó Da Silva</h3><div class="role">Fundador &amp; Direção Criativa</div><p>Design, identidade e experiência. Também trata dos sistemas e das automações.</p></div></article>
+      <article class="person tilt" tabindex="0"><div class="avatar" aria-hidden="true">MF</div><div><h3>Marcos Furtado</h3><div class="role">Cofundador &amp; Direção Técnica</div><p>Backend, alojamento e servidores. Garante que cada site carrega depressa e fica no ar.</p></div></article>
+    </div>
+    <p class="tech"><span class="live-dot" aria-hidden="true"></span>Desenvolvido com tecnologias de ponta.</p>
+  </div>
+</section>
+
+<section class="falar band" id="falar" aria-labelledby="fl-title">
+  <div class="wrap fl-in">
+    <div class="eyebrow"><span>Contacto</span><span>Resposta em 24h</span></div>
+    <h2 id="fl-title">Bora pôr o teu negócio <span class="it">no ar?</span></h2>
+    <p>Conta-nos o que precisas em três passos. Respondemos em português, sem complicações.</p>
+    <a class="pbtn solid big" href="#contacto">Começar projeto <span class="pbtn-ar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+    <div class="cpills"><span class="cpill"><i class="live-dot"></i>Resposta em 24h</span><a class="cpill" href="https://wa.me/258840772648" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1112 20a8 8 0 01-3.9-1z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-1 1c-1-.4-1.9-1.3-2.3-2.3l1-1-1-2z" fill="currentColor" stroke="none"/></svg>WhatsApp +258 84 077 2648</a><a class="cpill" href="https://instagram.com/os.design.mz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg>@os.design.mz</a><span class="cpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>Maputo, Moçambique</span></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="capband" aria-hidden="true"></div>
+  <div class="band"><div class="foot-inner">
+    <div><a class="brand" href="#topo"><svg aria-hidden="true" fill="currentColor"><use href="#os-s"/></svg>OS Design</a><p class="tagl">Do Rovuma ao Maputo — sites com sotaque nosso.</p></div>
+    <div><h4>Navegar</h4><ul><li><a href="#processo">Processo</a></li><li><a href="#editor">Editor</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#trabalho">Trabalho</a></li></ul></div>
+    <div><h4>Falar</h4><ul><li><a href="#contacto">Começar projeto</a></li><li><a href="https://wa.me/258840772648" target="_blank" rel="noopener">+258 84 077 2648</a></li><li><a href="https://instagram.com/os.design.mz" target="_blank" rel="noopener">@os.design.mz</a></li><li>Maputo, Moçambique</li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 OS Design · Feito em Maputo, com maningue cuidado.</span><button class="pbtn line sm" type="button" id="replay">Rever a intro</button></div></div>
+</footer>
+
+<!-- menu -->
+<div class="menu" id="menu" hidden data-lenis-prevent>
+  <div class="menu-card" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="topo" aria-hidden="true"></div>
+    <svg class="menu-ondas" viewBox="0 0 760 1000" fill="none" aria-hidden="true"><path class="o" style="--i:0;--s:0" d="M380 220A30 30 0 0 0 380 280"/><path class="o" style="--i:1;--s:0" d="M380 193A57 57 0 0 0 380 307"/><path class="o" style="--i:2;--s:0" d="M380 166A84 84 0 0 0 380 334"/><path class="o hi" style="--i:3;--s:0" d="M380 139A111 111 0 0 0 380 361"/><path class="o" style="--i:4;--s:0" d="M380 112A138 138 0 0 0 380 388"/><path class="o" style="--i:5;--s:0" d="M380 85A165 165 0 0 0 380 415"/><path class="o" style="--i:6;--s:0" d="M380 58A192 192 0 0 0 380 442"/><path class="o" style="--i:7;--s:0" d="M380 31A219 219 0 0 0 380 469"/><path class="o hi" style="--i:8;--s:0" d="M380 4A246 246 0 0 0 380 496"/><path class="o" style="--i:9;--s:0" d="M380 -23A273 273 0 0 0 380 523"/><path class="o" style="--i:10;--s:0" d="M380 -50A300 300 0 0 0 380 550"/><path class="o" style="--i:11;--s:0" d="M380 -77A327 327 0 0 0 380 577"/><path class="o" style="--i:12;--s:0" d="M380 -104A354 354 0 0 0 380 604"/><path class="o" style="--i:13;--s:0" d="M380 -131A381 381 0 0 0 380 631"/><path class="o" style="--i:0;--s:1" d="M380 720A30 30 0 0 1 380 780"/><path class="o" style="--i:1;--s:1" d="M380 693A57 57 0 0 1 380 807"/><path class="o" style="--i:2;--s:1" d="M380 666A84 84 0 0 1 380 834"/><path class="o" style="--i:3;--s:1" d="M380 639A111 111 0 0 1 380 861"/><path class="o" style="--i:4;--s:1" d="M380 612A138 138 0 0 1 380 888"/><path class="o hi" style="--i:5;--s:1" d="M380 585A165 165 0 0 1 380 915"/><path class="o" style="--i:6;--s:1" d="M380 558A192 192 0 0 1 380 942"/><path class="o" style="--i:7;--s:1" d="M380 531A219 219 0 0 1 380 969"/><path class="o" style="--i:8;--s:1" d="M380 504A246 246 0 0 1 380 996"/><path class="o" style="--i:9;--s:1" d="M380 477A273 273 0 0 1 380 1023"/><path class="o hi" style="--i:10;--s:1" d="M380 450A300 300 0 0 1 380 1050"/><path class="o" style="--i:11;--s:1" d="M380 423A327 327 0 0 1 380 1077"/><path class="o" style="--i:12;--s:1" d="M380 396A354 354 0 0 1 380 1104"/><path class="o" style="--i:13;--s:1" d="M380 369A381 381 0 0 1 380 1131"/></svg>
+    <nav class="menu-links" aria-label="Menu"><a href="#processo"><span class="roll"><span>Processo</span><span class="it" aria-hidden="true">Processo</span></span></a><a href="#editor"><span class="roll"><span>Editor</span><span class="it" aria-hidden="true">Editor</span></span></a><a href="#servicos"><span class="roll"><span>Serviços</span><span class="it" aria-hidden="true">Serviços</span></span></a><a href="#trabalho"><span class="roll"><span>Trabalho</span><span class="it" aria-hidden="true">Trabalho</span></span></a><a href="#equipa"><span class="roll"><span>Equipa</span><span class="it" aria-hidden="true">Equipa</span></span></a><a href="#contacto"><span class="roll"><span>Fala connosco</span><span class="it" aria-hidden="true">Fala connosco</span></span></a></nav>
+    <div class="menu-foot"><span>© 2026 OS Design · Do Rovuma ao Maputo</span><div class="cpills"><span class="cpill"><i class="live-dot"></i>Resposta em 24h</span><a class="cpill" href="https://wa.me/258840772648" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1112 20a8 8 0 01-3.9-1z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-1 1c-1-.4-1.9-1.3-2.3-2.3l1-1-1-2z" fill="currentColor" stroke="none"/></svg>WhatsApp +258 84 077 2648</a><a class="cpill" href="https://instagram.com/os.design.mz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg>@os.design.mz</a><span class="cpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>Maputo, Moçambique</span></div></div>
+  </div>
+</div>
+
+<!-- página de contacto -->
+<div class="cv" id="cv" hidden data-lenis-prevent role="dialog" aria-modal="true" aria-labelledby="cvTitle">
+  <div class="cv-card">
+    <div class="cv-top"><a class="brand" href="#topo" id="cvHome"><svg aria-hidden="true" fill="currentColor"><use href="#os-s"/></svg>OS Design</a><button class="npill ghost" type="button" id="cvBack"><span aria-hidden="true">←</span> Voltar ao site</button></div>
+    <form class="cv-form" id="cvForm" novalidate>
+      <div class="cv-step" data-step="1">
+        <div class="cv-s1">
+          <h2 class="cv-need" id="cvTitle">Preciso de</h2>
+          <div class="wheel" id="wheel" role="listbox" tabindex="0" aria-label="O que precisas? Usa as setas"></div>
+          <button class="npill solid big" type="button" data-next>Seguinte <span class="ar" aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <div class="cv-step" data-step="2" hidden>
+        <div class="cv-sum">Preciso de <span class="chipw" data-need></span></div>
+        <div class="cv-row">
+          <label class="bigin"><span class="sr">O teu nome</span><input id="cvNome" placeholder="o teu nome" autocomplete="name"></label>
+          <label class="bigin"><span class="sr">E-mail</span><input id="cvEmail" type="email" inputmode="email" placeholder="e-mail" autocomplete="email"></label>
+          <button class="npill solid big" type="button" data-next>Seguinte <span class="ar" aria-hidden="true">→</span></button>
+        </div>
+        <p class="cv-err" id="cvErr2" aria-live="polite"></p>
+      </div>
+      <div class="cv-step" data-step="3" hidden>
+        <div class="cv-sum">Preciso de <span class="chipw" data-need></span><span class="chipw ghost" data-name></span></div>
+        <div class="cv-row">
+          <label class="bigin"><span class="sr">WhatsApp (opcional)</span><input id="cvWa" type="tel" inputmode="tel" placeholder="whatsapp" autocomplete="tel"></label>
+          <label class="bigin wide"><span class="sr">Conta-nos do projeto</span><input id="cvMsg" placeholder="conta-nos do projeto"></label>
+          <button class="npill solid big" type="button" data-next>Enviar <span class="ar" aria-hidden="true">→</span></button>
+        </div>
+        <p class="cv-err" id="cvErr3" aria-live="polite"></p>
+      </div>
+      <div class="cv-step" data-step="4" hidden>
+        <div class="cv-done">
+          <h2>Kanimambo, <span id="cvName">tu</span>!</h2>
+          <p>O teu pedido está pronto. Envia-o pelo WhatsApp e respondemos em 24h.</p>
+          <div class="cv-row"><a class="npill solid big" id="cvWaGo" href="https://wa.me/258840772648" target="_blank" rel="noopener">Enviar pelo WhatsApp <span class="ar" aria-hidden="true">→</span></a><button class="npill ghost big" type="button" id="cvEdit">Editar</button></div>
+        </div>
+      </div>
+    </form>
+    <div class="cv-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    <div class="cpills"><span class="cpill"><i class="live-dot"></i>Resposta em 24h</span><a class="cpill" href="https://wa.me/258840772648" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1112 20a8 8 0 01-3.9-1z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-1 1c-1-.4-1.9-1.3-2.3-2.3l1-1-1-2z" fill="currentColor" stroke="none"/></svg>WhatsApp +258 84 077 2648</a><a class="cpill" href="https://instagram.com/os.design.mz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg>@os.design.mz</a><span class="cpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>Maputo, Moçambique</span></div>
+  </div>
+</div>
+<div class="pt" id="pt" aria-hidden="true"><div class="pt-panel" id="ptPanel"><svg class="pt-mark" viewBox="0 0 512 512" fill="currentColor"><use href="#os-s"/></svg></div></div>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-card glass">
+    <div id="mForm">
+      <h3 id="mTitle">A tua <span class="it">proposta</span></h3>
+      <p style="margin-top: 8px">Geramos um PDF com a pré-visualização, as tuas escolhas e os comentários. Depois podes enviá-lo pelo WhatsApp.</p>
+      <div style="display: grid; gap: 14px; margin-top: 16px">
+        <div class="fld" id="mfN"><label for="mNome">Nome</label><input id="mNome" autocomplete="name"><span class="err"></span></div>
+        <div class="fld" id="mfE"><label for="mEmail">E-mail</label><input id="mEmail" type="email" autocomplete="email"><span class="err"></span></div>
+        <div class="fld" id="mfW"><label for="mWa">WhatsApp</label><input id="mWa" type="tel" autocomplete="tel" placeholder="84 123 4567"><span class="err"></span></div>
+        <label class="consent"><input type="checkbox" id="mOk"> <span>Aceito que a OS Design use estes dados para me enviar a proposta e falar comigo sobre o projeto.</span></label>
+        <div class="modal-actions"><button class="pbtn line" type="button" id="mCancel">Cancelar</button><button class="pbtn solid" type="button" id="mGo">Gerar PDF <span class="pbtn-ar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></button></div>
+      </div>
+    </div>
+    <div class="result" id="mResult" hidden>
+      <h3>Proposta <span class="it">pronta.</span></h3>
+      <div id="mStatus" class="result"></div>
+      <div class="modal-actions"><a class="pbtn solid" id="mWaLink" href="https://wa.me/258840772648" target="_blank" rel="noopener">Enviar pelo WhatsApp <span class="pbtn-ar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a><button class="pbtn line" type="button" id="mClose">Fechar</button></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+<script type="module" src="js/main.js"></script>
+
+</body></html>

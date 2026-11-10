@@ -1,0 +1,62 @@
+{
+ "id": "loja",
+ "label": "Loja / E-commerce",
+ "brand": "Ninho Casa",
+ "domain": "ninhocasa.co.mz",
+ "headline": "A casa que te recebe.",
+ "sub": "Cestos, cerâmica e luz feitos por artesãos moçambicanos, com entrega em todo o país.",
+ "cta": "Ver a loja",
+ "links": [
+  "Casa",
+  "Cozinha",
+  "Artesãos",
+  "Loja"
+ ],
+ "fonts": {
+  "display": "Montserrat",
+  "weight": 800
+ },
+ "radius": "10px",
+ "nav": "classic",
+ "hero": "split",
+ "image": "assets/img/tpl-ninho.webp",
+ "product": null,
+ "palettes": [
+  {
+   "name": "Barro e creme",
+   "bg": "#F6EEE4",
+   "fg": "#2B1D14",
+   "accent": "#B4532F",
+   "surface": "#FFFFFF"
+  },
+  {
+   "name": "Oliveira",
+   "bg": "#EEF0E4",
+   "fg": "#232A16",
+   "accent": "#5E6E2F",
+   "surface": "#FFFFFF"
+  },
+  {
+   "name": "Carvão e palha",
+   "bg": "#1F1B17",
+   "fg": "#F3EBDD",
+   "accent": "#D9A55B",
+   "surface": "#2B2620"
+  }
+ ],
+ "cards": [
+  [
+   "Feito à mão",
+   "Por 40 artesãos locais"
+  ],
+  [
+   "Pagamento M-Pesa",
+   "E cartão, na entrega"
+  ],
+  [
+   "Entrega 48 h",
+   "Maputo e Matola"
+  ]
+ ],
+ "art": null
+}

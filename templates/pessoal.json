@@ -1,0 +1,62 @@
+{
+ "id": "pessoal",
+ "label": "Marca pessoal",
+ "brand": "Nádia C.",
+ "domain": "nadia.co.mz",
+ "headline": "Fotografia que conta quem és.",
+ "sub": "Retratos, marcas e eventos em Maputo. Agenda uma sessão e recebe as fotos em 72 h.",
+ "cta": "Agendar sessão",
+ "links": [
+  "Portfólio",
+  "Sessões",
+  "Sobre",
+  "Contacto"
+ ],
+ "fonts": {
+  "display": "DM Serif Display",
+  "weight": 400
+ },
+ "radius": "12px",
+ "nav": "minimal",
+ "hero": "type",
+ "image": null,
+ "art": "radial-gradient(circle at 70% 30%, #f28c6b 0, transparent 45%), radial-gradient(circle at 20% 80%, #f7b58b 0, transparent 40%), #2a1e1a",
+ "product": null,
+ "palettes": [
+  {
+   "name": "Terracota",
+   "bg": "#F4EDE6",
+   "fg": "#2A1E1A",
+   "accent": "#C8553D",
+   "surface": "#FFFFFF"
+  },
+  {
+   "name": "Câmara escura",
+   "bg": "#121212",
+   "fg": "#F2F2F2",
+   "accent": "#F28C6B",
+   "surface": "#1E1E1E"
+  },
+  {
+   "name": "Oceano",
+   "bg": "#E9F3F4",
+   "fg": "#0E3438",
+   "accent": "#0E6E73",
+   "surface": "#FFFFFF"
+  }
+ ],
+ "cards": [
+  [
+   "Retratos",
+   "Estúdio ou exterior"
+  ],
+  [
+   "Marcas",
+   "Produtos e equipas"
+  ],
+  [
+   "Eventos",
+   "Casamentos e lançamentos"
+  ]
+ ]
+}

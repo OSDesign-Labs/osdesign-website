@@ -1,0 +1,62 @@
+{
+ "id": "consultoria",
+ "label": "Consultoria",
+ "brand": "Rumo",
+ "domain": "rumo-consultoria.co.mz",
+ "headline": "Estratégia que se vê nos números.",
+ "sub": "Diagnóstico, plano de ação e formações práticas para empresas em crescimento.",
+ "cta": "Marcar conversa",
+ "links": [
+  "Serviços",
+  "Formações",
+  "Casos",
+  "Contacto"
+ ],
+ "fonts": {
+  "display": "Syne",
+  "weight": 800
+ },
+ "radius": "999px",
+ "nav": "glass",
+ "hero": "full",
+ "image": null,
+ "art": "radial-gradient(circle at 75% 35%, #2f5a96 0, transparent 50%), radial-gradient(circle at 30% 80%, #b8902f55 0, transparent 40%), linear-gradient(150deg, #1b3a6b, #0e1f3a)",
+ "product": null,
+ "palettes": [
+  {
+   "name": "Marinho e ouro",
+   "bg": "#0E1F3A",
+   "fg": "#F6F3EC",
+   "accent": "#B8902F",
+   "surface": "#16294A"
+  },
+  {
+   "name": "Creme",
+   "bg": "#F6F3EC",
+   "fg": "#13294B",
+   "accent": "#13294B",
+   "surface": "#FFFFFF"
+  },
+  {
+   "name": "Verde executivo",
+   "bg": "#0F2A24",
+   "fg": "#EEF5F1",
+   "accent": "#46C6A5",
+   "surface": "#173A32"
+  }
+ ],
+ "cards": [
+  [
+   "Consultoria",
+   "Plano de ação em 30 dias"
+  ],
+  [
+   "Formações",
+   "Turmas presenciais e online"
+  ],
+  [
+   "Mentoria",
+   "Sessões mensais"
+  ]
+ ]
+}

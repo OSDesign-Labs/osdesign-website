@@ -1,0 +1,62 @@
+{
+ "id": "beleza",
+ "label": "Saúde / Beleza",
+ "brand": "lumen",
+ "domain": "lumen.co.mz",
+ "headline": "Pele calma. Tu, sem filtros.",
+ "sub": "Fórmulas feitas para a tua pele, recomendadas por especialistas e entregues em casa.",
+ "cta": "Criar a minha fórmula",
+ "links": [
+  "Rotina",
+  "Produtos",
+  "Resultados",
+  "Ajuda"
+ ],
+ "fonts": {
+  "display": "Coiny",
+  "weight": 400
+ },
+ "radius": "12px",
+ "nav": "centered",
+ "hero": "angle",
+ "image": "assets/img/tpl-cur.webp",
+ "product": "assets/img/bottle.webp",
+ "palettes": [
+  {
+   "name": "Lavanda",
+   "bg": "#F6F5FB",
+   "fg": "#1D1D44",
+   "accent": "#6F5CFF",
+   "surface": "#FFFFFF"
+  },
+  {
+   "name": "Rosa",
+   "bg": "#FFF1F7",
+   "fg": "#3A1230",
+   "accent": "#FF4F9A",
+   "surface": "#FFFFFF"
+  },
+  {
+   "name": "Noite lilás",
+   "bg": "#1D1D44",
+   "fg": "#F6F5FB",
+   "accent": "#FFD65A",
+   "surface": "#2A2A5C"
+  }
+ ],
+ "cards": [
+  [
+   "Diagnóstico",
+   "3 perguntas, 2 minutos"
+  ],
+  [
+   "Entrega",
+   "Todos os meses em casa"
+  ],
+  [
+   "Especialistas",
+   "Acompanhamento por chat"
+  ]
+ ],
+ "art": null
+}
